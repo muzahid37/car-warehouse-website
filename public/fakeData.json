@@ -1,0 +1,59 @@
+
+[
+    {
+        "name":"Jaguer M1 Hybrid",
+        "image":"https://i.ibb.co/WyL4CD8/warehpus-Car1.jpg",
+        "shortDescription":"",
+        "price":"$16,000",
+        "quantity":"5",
+        "supplierName":"Jaguer auto mobail"
+    },
+    {
+        "name":"Audi A8 Hybrid",
+        "image":"https://i.ibb.co/mFJDh7B/warehouscar2.jpg",
+        "shortDescription":"",
+        "price":"$15,500",
+        "quantity":"3",
+        "supplierName":"Audi automobail"
+    },
+    {
+        "name":"Mercedez Benz E",
+        "image":"https://i.ibb.co/yn3WtzR/warehousecar3.jpg",
+        "shortDescription":"",
+        "price":"$15,000",
+        "quantity":"4",
+        "supplierName":"Mercedez auto mobail"
+    },
+    {
+        "name":"Jaguer M1 Hybrid",
+        "image":"https://i.ibb.co/mSJkVjJ/warehouscar-4.jpg",
+        "shortDescription":"",
+        "price":"$12,000",
+        "quantity":"1",
+        "supplierName":"Jaguer auto mobail"
+    },
+    {
+        "name":"Audi A8 Hybrid",
+        "image":"https://i.ibb.co/qpPmvCP/car-5.jpg",
+        "shortDescription":"",
+        "price":"$18,000",
+        "quantity":"6",
+        "supplierName":"Audi auto mobail"
+    },
+    {
+        "name":"Bugatti Venon",
+        "image":"https://i.ibb.co/VJLQQnF/car-6.jpg",
+        "shortDescription":"",
+        "price":"$11,000",
+        "quantity":"4",
+        "supplierName":"Bugatti auto mobail"
+    },
+    {
+        "name":"Jaguer M1 Hybrid",
+        "image":"https://i.ibb.co/FJ87g9C/car-9.jpg",
+        "shortDescription":"",
+        "price":"$15,000",
+        "quantity":"3",
+        "supplierName":"Jaguer auto mobail"
+    }
+]
