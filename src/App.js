@@ -6,6 +6,7 @@ import Service from './Components/Service/Service';
 import { Routes, Route, Link } from "react-router-dom";
 import Header from './Components/Header/Header';
 import Inventory from './Components/Inventory/Inventory'
+import CarDetail from './Components/CarDetail/CarDetail';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='about' element={<About></About>}></Route>
         <Route path='service' element={<Service></Service>}></Route>
         <Route path='inventory' element={<Inventory></Inventory>}></Route>
+        <Route path='/inventory/:carDetailId' element={<CarDetail></CarDetail>}></Route>
       </Routes>
       
      

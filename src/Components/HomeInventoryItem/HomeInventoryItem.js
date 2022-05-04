@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const HomeInventoryItem = ({ carDetail }) => {
   const { _id, name, image, description, price } = carDetail;
+
+  const navigate=useNavigate();
+
+  const navigateToCarDetail=id=>{
+    navigate(`/inventory/${id}`)
+  }
+
   return (
     <div className="card-group col-4 mt-1">
     <div className="card">
@@ -13,8 +21,9 @@ const HomeInventoryItem = ({ carDetail }) => {
           lead-in to additional content. This content is a little bit
           longer.
         </p>
-        <p className="card-text">
+        <p className="card-text d-flex justify-content-between rounded">
           <small className="text-muted">{price}</small>
+          <button className="btn-primary border-0 " onClick={()=>navigateToCarDetail(_id)}>See details</button>
         </p>
       </div>
     </div>
