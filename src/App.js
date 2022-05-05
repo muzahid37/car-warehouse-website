@@ -7,11 +7,11 @@ import { Routes, Route, Link } from "react-router-dom";
 import Header from './Components/Header/Header';
 import Inventory from './Components/Inventory/Inventory'
 import CarDetail from './Components/CarDetail/CarDetail';
+import Login from './Components/Login/Login';
 
 function App() {
   return (
     <div className="App">
-      <h2>this is car warehouse</h2>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -19,6 +19,7 @@ function App() {
         <Route path='service' element={<Service></Service>}></Route>
         <Route path='inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/inventory/:carDetailId' element={<CarDetail></CarDetail>}></Route>
+        <Route path='login' element={<Login></Login>}></Route>
       </Routes>
       
      
