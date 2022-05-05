@@ -8,6 +8,7 @@ import Header from './Components/Header/Header';
 import Inventory from './Components/Inventory/Inventory'
 import CarDetail from './Components/CarDetail/CarDetail';
 import Login from './Components/Login/Login';
+import SingUp from './SingUp/SingUp';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/inventory/:carDetailId' element={<CarDetail></CarDetail>}></Route>
         <Route path='login' element={<Login></Login>}></Route>
+        <Route path='singup' element={<SingUp></SingUp>}></Route>
       </Routes>
       
      
