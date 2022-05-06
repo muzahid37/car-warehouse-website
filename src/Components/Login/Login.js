@@ -8,9 +8,11 @@ const Login = () => {
     const [
         signInWithEmailAndPassword,
         user,
-        loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+
+      
+
 
     const navigate=useNavigate();
 
@@ -21,6 +23,7 @@ const Login = () => {
       if(user){
           navigate('/')
       }
+     
 
       const handleLogin = (event) => {
         event.preventDefault();

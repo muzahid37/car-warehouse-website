@@ -2,12 +2,14 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import SocialLog from '../Components/ShearedPage/SocialLogin/SocialLog';
 import auth from '../firebase.init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword ,useUpdateProfile  } from 'react-firebase-hooks/auth';
+import { async } from '@firebase/util';
 
 
 const SingUp = () => {
     
     const [ createUserWithEmailAndPassword,user ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
+    const [updateProfile, updating, uodateError] = useUpdateProfile(auth);
 
     const navigate=useNavigate();
 
@@ -16,16 +18,20 @@ const SingUp = () => {
       }
 
       if(user){
-          navigate('/')
+         console.log(user)
       }
 
-      const handleRegister = (event) => {
+      const handleRegister = async(event) => {
         event.preventDefault();
+        const name=event.target.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         // const agree = event.target.terms.checked;
 
-        createUserWithEmailAndPassword(email,password);
+        await createUserWithEmailAndPassword(email,password);
+        await updateProfile({displayName:name});
+        console.log('Updated profile');
+        navigate('/')
         // 
     }
 
@@ -36,6 +42,8 @@ const SingUp = () => {
           <div className="col-12">
             <div className="form-container w-50 m-auto mt-5">
               <form onSubmit={handleRegister} action="">
+                  <input className="w-100 mt-2" type="text" name="name" id="" placeholder='Enter your name' />
+                  <br />
                 <input className="w-100 mt-2"
                   type="email"
                   name="email"

@@ -1,20 +1,93 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Header.css'
+import React from "react";
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./Header.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
-    return (
-        <div>
-            <nav> 
-                <Link to='/'>Home</Link>
+  const [user] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
+  return (
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          Navbar
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                {" "}
+                <Link to="/">Home</Link>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                {" "}
                 <Link to="/about">About</Link>
-                <Link to="/service">Service</Link>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                {" "}
                 <Link to="/inventory">Inventory</Link>
-                <Link to="/login">Login</Link>
-                <Link to="/singup">Sing Up</Link>
-            </nav>
+              </a>
+            </li>
+          </ul>
+          {user && (
+            <>
+              <Nav.Link as={Link} to="addservice">
+                Add
+              </Nav.Link>
+              <Nav.Link as={Link} to="manage">
+                Manage
+              </Nav.Link>
+            </>
+          )}
+          {user ? (
+            <button
+              className="btn btn-link text-white text-decoration-none"
+              onClick={handleSignOut}
+            >
+              sign out
+            </button>
+          ) : (
+            <Nav.Link as={Link} to="login">
+              Login
+            </Nav.Link>
+          )}
         </div>
-    );
+      </div>
+    </nav>
+    // <div>
+    //     <nav>
+    //         <Link to='/'>Home</Link>
+    //         <Link to="/about">About</Link>
+    //         <Link to="/service">Service</Link>
+    //         <Link to="/inventory">Inventory</Link>
+    //         <Link to="/login">Login</Link>
+    //         <Link to="/singup">Sing Up</Link>
+    //     </nav>
+    // </div>
+  );
 };
 
 export default Header;
