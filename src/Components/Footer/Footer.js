@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div>
             <div className='footer-top-part'></div>
-             <div className='bg-primary footer fixed-bottom'>
+             <div className='bg-light  footer fixed-bottom'>
             <p>copy right <a href="#">Md. Muzahidul Islam</a></p>
         </div>
         </div>

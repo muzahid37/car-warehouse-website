@@ -6,13 +6,17 @@
 }
 footer{
     margin-top: 50px;
+   
 
+}
+.footer p{
+    color: black;
 }
 .footer-top-part{
     height: 100px;
 }
 .footer a{
-    color: antiquewhite;
+    color: rgba(130, 100, 100, 0.657)
 
 }
 .footer a:hover{

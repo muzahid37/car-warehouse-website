@@ -14,6 +14,8 @@ import AddItem from './Components/AddItem/AddItem';
 import MyItem from './Components/MyItem/MyItem';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Footer from './Components/Footer/Footer';
+import Blog from './Components/Blog/Blog';
+import NothingFound from './Components/NothingFound/NothingFound';
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='about' element={<About></About>}></Route>
+        <Route path='blog' element={<Blog></Blog>}></Route>
         <Route path='service' element={<Service></Service>}></Route>
         <Route path='inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/inventory/:carDetailId' element={
@@ -36,6 +38,7 @@ function App() {
           <RequireAuth><AddItem></AddItem></RequireAuth>
         }></Route>
         <Route path='myItem' element={<MyItem></MyItem>}></Route>
+        <Route path='*' element={<NothingFound></NothingFound>}></Route>
       </Routes>
       <Footer></Footer>
       
