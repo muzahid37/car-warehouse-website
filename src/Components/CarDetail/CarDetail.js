@@ -22,7 +22,7 @@ const CarDetail = () => {
         <div className="carDetail-right col-lg-6 mt-5">
           <h2>{carDetail.name}</h2>
           <p className="text-dark">{carDetail.shortDescription}</p>
-          <h4>Price:{carDetail.price}</h4>
+          <h4>Price:${carDetail.price}</h4>
           <h4>Quantity:{carDetail.quantity}</h4>
           <div className="carDetail-left-button mt-5 ">
           <button className="btn-primary border-0 ">Delivered</button>

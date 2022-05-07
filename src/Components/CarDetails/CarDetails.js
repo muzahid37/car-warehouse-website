@@ -22,7 +22,7 @@ const CarDetails = ({ carDetail }) => {
             <h5 className="card-title">{name}</h5>
             <p  className="card-text text-dark item-description">{shortDescription}</p>
             <p className="card-text d-flex justify-content-between rounded">
-          <small className="text-muted">{price}</small>
+          <small className="text-muted">${price}</small>
           <button onClick={()=>navigateToCarDetail(_id)} className="btn-primary border-0 ">Update</button>
         </p>
           </div>

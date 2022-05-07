@@ -51,8 +51,9 @@ const AddItem = () => {
           placeholder="stock"
           className="mb-2"
           type="number"
-          {...register("stock")}
+          {...register("quantity")}
         />
+       
         <input
           placeholder="supplierName
 "

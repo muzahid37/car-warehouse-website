@@ -23,7 +23,7 @@ const HomeInventoryItem = ({ carDetail }) => {
           {shortDescription}
         </p>
         <p className="card-text d-flex justify-content-between rounded">
-          <small className="text-muted">{price}</small>
+          <small className="text-muted">${price}</small>
         </p>
         <div>
         <button className="btn-primary border-0 " onClick={()=>navigateToCarDetail(_id)}>Update</button>
