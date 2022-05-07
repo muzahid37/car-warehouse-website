@@ -13,6 +13,7 @@ import ManageItem from './Components/ManageItem/ManageItem';
 import AddItem from './Components/AddItem/AddItem';
 import MyItem from './Components/MyItem/MyItem';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -28,10 +29,15 @@ function App() {
         }></Route>
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='singup' element={<SingUp></SingUp>}></Route>
-        <Route path='manageItem' element={<ManageItem></ManageItem>}></Route>
-        <Route path='addItem' element={<AddItem></AddItem>}></Route>
+        <Route path='manageItem' element={
+          <RequireAuth><ManageItem></ManageItem></RequireAuth>
+        }></Route>
+        <Route path='addItem' element={
+          <RequireAuth><AddItem></AddItem></RequireAuth>
+        }></Route>
         <Route path='myItem' element={<MyItem></MyItem>}></Route>
       </Routes>
+      <Footer></Footer>
       
      
     </div>

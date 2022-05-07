@@ -1,0 +1,13 @@
+.single-car-img{
+    width: 100%;
+}
+.carDetail-right{
+    text-align: left;
+}
+.carDetail-right p{
+    margin: 0px;
+    line-height: 1.5;
+}
+.restock-btn{
+    margin-left: 30px;
+}

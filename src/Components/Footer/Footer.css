@@ -1,0 +1,21 @@
+.footer a,p{
+    line-height: 50px;
+    color: #fff;
+    text-decoration: none;
+
+}
+footer{
+    margin-top: 50px;
+
+}
+.footer-top-part{
+    height: 100px;
+}
+.footer a{
+    color: antiquewhite;
+
+}
+.footer a:hover{
+    color: red;
+
+}
