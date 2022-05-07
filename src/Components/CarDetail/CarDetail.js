@@ -6,7 +6,7 @@ const CarDetail = () => {
   const { carDetailId } = useParams();
   const [carDetail, setCarDetail] = useState({});
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${carDetailId}`;
+    const url = `https://salty-badlands-27477.herokuapp.com/inventory/${carDetailId}`;
     // console.log(url)
     fetch(url)
       .then((res) => res.json())

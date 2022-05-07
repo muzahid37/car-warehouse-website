@@ -13,7 +13,7 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="sticky-top">
   <Container>
     <Navbar.Brand href="#home"><img src="https://i.ibb.co/vDfR58n/download-2.png" alt="" /> </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -13,7 +13,6 @@ const BannerSlider = () => {
           />
           <Carousel.Caption>
             <h3>World largest automotive marketplace.</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={500}>
@@ -24,7 +23,6 @@ const BannerSlider = () => {
           />
           <Carousel.Caption>
             <h3>World largest automotive marketplace.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>

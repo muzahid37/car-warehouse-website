@@ -8,7 +8,7 @@ const ManageItem = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/inventory/${id}`;
+      const url = `https://salty-badlands-27477.herokuapp.com/inventory/${id}`;
       console.log(url);
       fetch(url, {
         method: "DELETE",

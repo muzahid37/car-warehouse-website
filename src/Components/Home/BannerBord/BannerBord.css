@@ -1,0 +1,10 @@
+.banner_bord_right{
+    padding: 30px;
+}
+.banner_bord_right_content{
+    text-align: left;
+}
+.banner_bord_right_content p{
+    color: black;
+    line-height: 1.5;
+  }

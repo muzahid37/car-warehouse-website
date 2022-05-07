@@ -6,7 +6,7 @@ const AddItem = () => {
   const onSubmit = data =>
    {
     console.log(data);
-    const url = `http://localhost:5000/inventory`;
+    const url = `https://salty-badlands-27477.herokuapp.com/inventory`;
     console.log(url);
     fetch(url, {
         method: 'POST',
