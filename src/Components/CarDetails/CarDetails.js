@@ -7,8 +7,8 @@ const CarDetails = ({ carDetail }) => {
   const navigate=useNavigate();
 
   const navigateToCarDetail=id=>{
-    // navigate(`/inventory/${id}`)
-    console.log('id')
+    navigate(`/inventory/${id}`)
+  
   
   }
   // console.log(name);
@@ -26,7 +26,7 @@ const CarDetails = ({ carDetail }) => {
             </p>
             <p className="card-text d-flex justify-content-between rounded">
           <small className="text-muted">{price}</small>
-          <button onClick={()=>navigateToCarDetail(_id)} className="btn-primary border-0 ">See details</button>
+          <button onClick={()=>navigateToCarDetail(_id)} className="btn-primary border-0 ">Update</button>
         </p>
           </div>
         </div>

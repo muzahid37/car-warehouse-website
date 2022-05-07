@@ -8,7 +8,9 @@ const HomeInventoryItem = ({ carDetail }) => {
 
   const navigateToCarDetail=id=>{
     navigate(`/inventory/${id}`)
+
   }
+  
 
   return (
     <div className="card-group col-4 mt-1">
@@ -23,8 +25,11 @@ const HomeInventoryItem = ({ carDetail }) => {
         </p>
         <p className="card-text d-flex justify-content-between rounded">
           <small className="text-muted">{price}</small>
-          <button className="btn-primary border-0 " onClick={()=>navigateToCarDetail(_id)}>See details</button>
         </p>
+        <div>
+        <button className="btn-primary border-0 " onClick={()=>navigateToCarDetail(_id)}>Update</button>
+       
+        </div>
       </div>
     </div>
   </div>

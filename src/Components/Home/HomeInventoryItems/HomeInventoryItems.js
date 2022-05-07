@@ -3,7 +3,7 @@ import useCarDetails from '../../../hooks/useCarDetails';
 import HomeInventoryItem from '../../HomeInventoryItem/HomeInventoryItem';
 
 const HomeInventoryItems = () => {
-    const [carDetails]= useCarDetails();
+    const [carDetails , setCarDetails]= useCarDetails();
     return (
         <div className='container'>
             <h2 className='text-primary mt-5  mb-5'>Our Inventory items</h2>
@@ -12,7 +12,8 @@ const HomeInventoryItems = () => {
                 carDetails.slice(0,6).map(carDetail =><HomeInventoryItem
                     key={carDetail._id}
                     carDetail={carDetail}
-                ></HomeInventoryItem>
+                > </HomeInventoryItem>
+                
                 )
             }
             </div>
