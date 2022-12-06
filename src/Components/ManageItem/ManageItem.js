@@ -8,7 +8,7 @@ const ManageItem = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://salty-badlands-27477.herokuapp.com/inventory/${id}`;
+      const url = `https://car-warehouse.up.railway.app/inventory/${id}`;
       console.log(url);
       fetch(url, {
         method: "DELETE",
@@ -31,7 +31,7 @@ const ManageItem = () => {
                     <h5>{carDetail.name}<button onClick={()=>handleDelete(carDetail._id)}>x</button></h5>
                     
                 */}
-       
+
         <table>
           <tr>
             <th>NAME</th>
@@ -45,14 +45,15 @@ const ManageItem = () => {
                 <td>{carDetail.name}</td>
                 <td>{carDetail.price}</td>
                 <td>{carDetail.quantity}</td>
-                <td><button onClick={()=>handleDelete(carDetail._id)}>x</button></td>
+                <td>
+                  <button onClick={() => handleDelete(carDetail._id)}>x</button>
+                </td>
               </tr>
             );
           })}
         </table>
       </div>
       );
-     
     </div>
   );
 };

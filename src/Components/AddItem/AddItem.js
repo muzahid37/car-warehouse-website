@@ -3,23 +3,22 @@ import { useForm } from "react-hook-form";
 
 const AddItem = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = data =>
-   {
+  const onSubmit = (data) => {
     console.log(data);
-    const url = `https://salty-badlands-27477.herokuapp.com/inventory`;
+    const url = `https://car-warehouse.up.railway.app/inventory`;
     console.log(url);
     fetch(url, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(data)
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
     })
-    .then(res=> res.json())
-    .then(result =>{
+      .then((res) => res.json())
+      .then((result) => {
         console.log(result);
-    } )
-};
+      });
+  };
 
   return (
     <div className="w-50 mx-auto">
@@ -53,7 +52,7 @@ const AddItem = () => {
           type="number"
           {...register("quantity")}
         />
-       
+
         <input
           placeholder="supplierName
 "

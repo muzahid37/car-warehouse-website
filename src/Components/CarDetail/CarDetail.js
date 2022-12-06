@@ -6,7 +6,7 @@ const CarDetail = () => {
   const { carDetailId } = useParams();
   const [carDetail, setCarDetail] = useState({});
   useEffect(() => {
-    const url = `https://salty-badlands-27477.herokuapp.com/inventory/${carDetailId}`;
+    const url = `https://car-warehouse.up.railway.app/inventory/${carDetailId}`;
     // console.log(url)
     fetch(url)
       .then((res) => res.json())
@@ -25,15 +25,12 @@ const CarDetail = () => {
           <h4>Price:${carDetail.price}</h4>
           <h4>Quantity:{carDetail.quantity}</h4>
           <div className="carDetail-left-button mt-5 ">
-          <button className="btn-primary border-0 ">Delivered</button>
-          <button className="btn-primary border-0 restock-btn">Restock</button>
-      
+            <button className="btn-primary border-0 ">Delivered</button>
+            <button className="btn-primary border-0 restock-btn">
+              Restock
+            </button>
           </div>
-
-
         </div>
-       
-
       </div>
     </div>
   );
